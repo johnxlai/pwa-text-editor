@@ -16,9 +16,9 @@ const initdb = async () =>
 export const putDb = async (content) => {
   try {
     console.log('PUT to the database');
-    const jadeDb = await openDB('jade', 1);
-    const tx = jadeDb.transaction('jade', 'readwrite');
-    const store = tx.objectStore('jade');
+    const jateDb = await openDB('jate', 1);
+    const tx = jateDb.transaction('jate', 'readwrite');
+    const store = tx.objectStore('jate');
     const request = store.put({ todo: content });
     // const request = store.put({ id: id, todo: content });
     const result = await request;
@@ -32,10 +32,10 @@ export const putDb = async (content) => {
 export const getDb = async () => {
   try {
     // Create a connection to the database database and version we want to use.
-    const jadeDb = await openDB('jate', 1);
+    const jateDb = await openDB('jate', 1);
 
     // Create a new transaction and specify the database and data privileges.
-    const tx = jadeDb.transaction('jate', 'readonly');
+    const tx = jateDb.transaction('jate', 'readonly');
 
     // Open up the desired object store.
     const store = tx.objectStore('jate');
