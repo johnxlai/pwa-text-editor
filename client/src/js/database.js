@@ -44,16 +44,16 @@ export const getDb = async () => {
     // Get confirmation of the request.
     const result = await request;
 
-    if (!result) {
-      console.log('result.value', result);
+    // if (!result) {
+    //   console.log('result.value', result);
 
-      return false;
-    } else {
-      return result.value;
-    }
+    //   return false;
+    // } else {
+    //   return result.value;
+    // }
 
-    // console.log('result.value', result);
-    // return result;
+    console.log('result.value', result);
+    return result?.value;
   } catch (err) {
     console.error('getDb not implemented');
   }
