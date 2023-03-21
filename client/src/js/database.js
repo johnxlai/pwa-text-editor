@@ -12,7 +12,7 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
+// Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
   try {
     console.log('PUT to the database');
@@ -27,7 +27,7 @@ export const putDb = async (content) => {
   }
 };
 
-// TODO: Add logic for a method that gets all the content from the database
+// Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   try {
     // Create a connection to the database database and version we want to use.
@@ -44,15 +44,8 @@ export const getDb = async () => {
     // Get confirmation of the request.
     const result = await request;
 
-    // if (!result) {
-    //   console.log('result.value', result);
-
-    //   return false;
-    // } else {
-    //   return result.value;
-    // }
-
     console.log('result.value', result);
+    //Using optional chaining for .value. only triggers when it exists
     return result?.value;
   } catch (err) {
     console.error('getDb not implemented');
