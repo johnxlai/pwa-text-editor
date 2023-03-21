@@ -1,4 +1,4 @@
-# Progressive Web Application - Text Editior
+# Progressive Web Application - Text Editor
 ![License Badge](https://img.shields.io/badge/license-MIT-brightgreen)
 
 ## User Story
